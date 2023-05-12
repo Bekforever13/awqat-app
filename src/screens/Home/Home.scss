@@ -1,0 +1,13 @@
+.row {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 2rem;
+
+	.item {
+		@apply p-4 rounded-md flex flex-col justify-center items-center gap-4 cursor-pointer hover:shadow-md hover:scale-105;
+
+		h1 {
+			@apply text-2xl font-semibold text-slate-700;
+		}
+	}
+}

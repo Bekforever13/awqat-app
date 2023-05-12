@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heading {
+	min-height: 400px;
+	width: 100%;
+	background-image: url(https://thumbs.dreamstime.com/b/ingredients-cooking-herbs-spices-black-stone-table-top-view-food-background-above-109114366.jpg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	h1 {
+		color: #fff;
+		font-size: 50px;
+	}
+}
