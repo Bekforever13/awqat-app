@@ -1,11 +1,3 @@
-body {
-	width: 100%;
-	margin: 0;
-	height: 100%;
-	background-color: #1d3041;
-	font-family: 'Open Sans - Semibold', sans-serif;
-	color: #fff;
-}
 .bl_page404 {
 	display: flex;
 	align-items: center;
@@ -15,7 +7,7 @@ body {
 	height: 100%;
 	margin-top: 50px;
 }
-h1 {
+.h1-notFound {
 	text-align: center;
 	margin-top: 1%;
 	margin-bottom: 25px;
@@ -23,12 +15,12 @@ h1 {
 	font-weight: 400;
 	text-transform: uppercase;
 }
-p {
+.p-notFound {
 	display: block;
 	margin: 25px auto;
 	max-width: 776px;
 	text-align: center;
-	color: #bcecf2;
+	color: #000;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
