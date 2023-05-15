@@ -28,7 +28,8 @@ const Home = () => {
 	return (
 		<div className='container mx-auto py-12'>
 			<Heading>
-				Welcome to <span className='text-orange-500'>AWQAT</span> app
+				Welcome to <span className='text-orange-500 font-semibold'>AWQAT</span>{' '}
+				app
 			</Heading>
 			<Spin spinning={loadingCategories}>
 				<div className='row'>

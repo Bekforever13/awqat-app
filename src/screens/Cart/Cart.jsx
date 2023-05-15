@@ -21,6 +21,12 @@ const Cart = () => {
 			</Heading>
 
 			{/* cart meals */}
+			{cartMeals.length === 0 && (
+				<img
+					className='w-[50%] mx-auto'
+					src='https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png'
+				/>
+			)}
 			<div className='row'>
 				{cartMeals.map(item => (
 					<div className='item relative' key={item.idMeal}>

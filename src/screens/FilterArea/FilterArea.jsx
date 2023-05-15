@@ -9,12 +9,11 @@ import {
 	fetchingErrorMeals,
 	fetchingMeals,
 } from '../../store/reducers/mealSlice'
-import './Meals.scss'
 import { addToCart } from '../../store/reducers/cartSlice'
 import { message } from 'antd'
 import cartSound from '../../assets/audio/addCart.mp3'
 
-const Meals = () => {
+const FilterArea = () => {
 	const { meals, loadingMeals } = useSelector(store => store.meal)
 	const { cartMeals } = useSelector(store => store.cart)
 	const dispatch = useDispatch()
@@ -35,7 +34,7 @@ const Meals = () => {
 		dispatch(fetchingMeals())
 		axios
 			.get(
-				`https://themealdb.com/api/json/v1/1/filter.php?c=${params.categoryName}`
+				`https://themealdb.com/api/json/v1/1/filter.php?a=${params.areaName}`
 			)
 			.then(res => {
 				dispatch(fetchedMeals(res.data.meals))
@@ -43,13 +42,13 @@ const Meals = () => {
 			.catch(err => {
 				dispatch(fetchingErrorMeals())
 			})
-	}, [])
+	}, [params])
 
 	return (
 		<div className='container mx-auto py-12'>
 			<Heading>
 				Meals of category{' '}
-				<b className='text-orange-600'>{params.categoryName}</b>
+				<b className='text-orange-600'>{params.areaName.toUpperCase()}</b>
 			</Heading>
 			<audio
 				src={cartSound}
@@ -57,7 +56,6 @@ const Meals = () => {
 				className='hidden'
 				ref={cartMusicPlayer}
 			></audio>
-
 			<div className='row'>
 				{meals.map(item => (
 					<div key={item.strMeal} className='item relative'>
@@ -91,4 +89,4 @@ const Meals = () => {
 	)
 }
 
-export default Meals
+export default FilterArea
